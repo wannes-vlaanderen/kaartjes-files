@@ -105,8 +105,8 @@ Na de dubbele punt zet je meer info over het kleur.
 
 Voor het toevoegen van de legende, laad je dus legende.js in `<script src="legende.js">` en moet je verder nog wat code toevoegen:
 ```js
-map.addControl(new LogoVlaanderen(map), "top-left");
-map.addControl(new Legenda(map), "top-right");
+map.addControl(new LogoVlaanderen(), "top-left");
+map.addControl(new Legenda(config.legende), "top-right");
 ```
 Je kan top-left en top-right aanpassen om het op een andere plaats op de kaart te krijgen.
 
