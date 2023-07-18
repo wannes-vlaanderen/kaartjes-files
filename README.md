@@ -92,7 +92,7 @@ Merk op: je kan een plaats in meerdere categorieën indelen door in 1 cel op de 
 
 Naast het instellen van de config, moet je ook volgende functie callen:
 ```js
-setupFilters(config.filters)
+setupFilters(config.filters);
 ```
 
 #### Legende
