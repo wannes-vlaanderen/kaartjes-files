@@ -57,6 +57,10 @@ De sideBarInfo wordt gebruikt voor het oplijsten van alle aangeduide locaties. O
   description: 'ENA Gebiedsprogramma rond het ontsluiten van het industrieterrein Genk-Zuid',
   sideBarInfo: ['Naam']
 ```
+Voor het toevoegen van de sidebar voeg je volgende code toe in main.js
+```js
+createSidebar();
+```
 
 #### Filters
 Filters laten u toe om op bepaalde eigenschappen van uw plaatsen te filteren. Bij ENA werd dit gebruikt om een onderscheid te maken tussen bestaande bedrijventerreinen, nieuwe bedrijventerreinen en infrastructuurprojecten. Ook bestond een filter op gemeente.  
