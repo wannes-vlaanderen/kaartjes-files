@@ -1,18 +1,6 @@
 /*
 This file should not be used without sidebar.js
 */
-filtersConfig = [
-    {
-      type: 'dropdown', 
-      title: 'Terreinfunctie',
-      columnHeader: 'Terreinfunctie',
-      listItems: [
-        'Nieuw bedrijventerrein',
-        'Bestaand bedrijventerrein',
-        'Infrastructuurwerken'
-      ],
-    },
-  ]
 
 function createFilterPopup(parent) {
   /*
@@ -333,12 +321,18 @@ function removeFiltersButton() {
   });
 }
 
-function setupFilter(filterSettings) {
+function setupFilters(filterSettings) {
+  // create filter popup box
+  const div1 = document.getElementById("div1")
+  createFilterPoput(div1)
+  
+  // setup filter dynamics
   createFilterObject(filterSettings);
   applyFilters();
   filters(filterSettings);
   removeFiltersButton();
-  // Modal - popup for filtering results
+  
+  // setup filterbutton dynamics
   const filterResults = document.getElementById('filterResults');
   const exitButton = document.getElementById('exitButton');
   const modal = document.getElementById('modal');
