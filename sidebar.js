@@ -47,5 +47,66 @@ function createSidebar() {
   div1.appendChild(map)
   
   document.body.appendChild(div1)
-  
+}
+
+function buildLocationList(locationData) {
+  // Add a new listing section to the sidebar.
+  const listings = document.getElementById('listings');
+  listings.innerHTML = '';
+  locationData.features.forEach((location, i) => {
+    const prop = location.properties;
+
+    const item = listings.appendChild(document.createElement('div'));
+    // Setup properties
+    item.id = 'item' + prop.id;
+    item.classList.add('item');
+
+    // Add the link to the individual listing created above.
+    const button = item.appendChild(document.createElement('button'));
+    button.classList.add('title');
+    button.id = 'button' + prop.id;
+
+    const p = button.appendChild(document.createElement('p'))
+    p.lineHeight = 1.25
+    p.innerHTML = prop[columnHeader[0]]
+
+    // Add details to the individual listing.
+    const details = item.appendChild(document.createElement('div'));
+    details.classList.add('content');
+
+    for (let i = 1; i < columnHeaders.length; i++) {
+      const div = document.createElement('div');
+      div.innerText += prop[columnHeaders[i]];
+      details.appendChild(div);
+    }
+
+    button.addEventListener('click', () => {
+      const clickedListing = location.geometry.coordinates;
+      flyToLocation(clickedListing);
+      createPopup(location);
+
+      const activeItem = document.getElementsByClassName('active');
+      if (activeItem[0]) {
+        activeItem[0].classList.remove('active');
+      }
+      this.parentNode.classList.add('active');
+
+      const divList = document.querySelectorAll('.content');
+      const divCount = divList.length;
+      for (i = 0; i < divCount; i++) {
+        divList[i].style.maxHeight = null;
+      }
+
+      for (let i = 0; i < geojsonData.features.length; i++) {
+        this.parentNode.classList.remove('active');
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+  });
 }
