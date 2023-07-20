@@ -77,7 +77,38 @@ function createPopup(currentFeature) {
     .addTo(map);
 };
 
+function sortByDistance(selectedPoint) {
+  const options = { units: 'miles' };
+  let data;
+  if (filteredGeojson.features.length > 0) {
+    data = filteredGeojson;
+  } else {
+    data = geojsonData;
+  }
+  data.features.forEach((data) => {
+    Object.defineProperty(data.properties, 'distance', {
+      value: turf.distance(selectedPoint, data.geometry, options),
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    });
+  });
 
+  data.features.sort((a, b) => {
+    if (a.properties.distance > b.properties.distance) {
+      return 1;
+    }
+    if (a.properties.distance < b.properties.distance) {
+      return -1;
+    }
+    return 0; // a must be equal to b
+  });
+  const listings = document.getElementById('listings');
+  while (listings.firstChild) {
+    listings.removeChild(listings.firstChild);
+  }
+  buildLocationList(data);
+}
 
 
 
