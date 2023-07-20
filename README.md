@@ -137,7 +137,7 @@ Mapbox is een tool die toelaat om lagen te plotten over een bestaande stijl. Voo
 - Voor het instellen van de config heb je nood aan een style link en een access token, ga naar share (knop naast publish).
 - Scroll naar beneden tot aan developer resources, daar krijg je je style link en je access token, vul die aan in de config in javascript.
 
-Hopelijk helpt deze beschrijving, laat gerust weten waar het duidelijker kan (bvb issues en pull requests)
+Hopelijk helpt deze beschrijving, laat gerust weten waar het duidelijker kan (via issues en pull requests)
 
 ## CSV
 Je heb ook een CSV file nodig, ik ben vrij zeker dat dit ook kan door in geoJSON de juist properties mee te geven, maar heb geen tijd gehad mij hiermee bezig te houden (dus voel je vrij om dat zeker wel te doen, je mag mij gerust sturen voor hulp). Je CSV file moet minstens volgende twee kolommen bevatten:  
