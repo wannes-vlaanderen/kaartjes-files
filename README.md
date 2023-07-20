@@ -145,7 +145,7 @@ Je heb ook een CSV file nodig, ik ben vrij zeker dat dit ook kan door in geoJSON
 - Latitude
 
 Deze geven de positie op de kaart van de bolletjes  
-Merk op: MapboxGL JS werkt met een decimale '.', geen ',', Engelse notatie is dus noodzakelijk.  
+Merk op: MapboxGL JS werkt met een decimale '.', geen ',', Engelse notatie is dus noodzakelijk, een aanrader om uw volledige excel of google spreadsheets in engelse getalnotatie te zetten.  
 Merk op: als de positie invalid is, dan komt de locatie niet in de lijst, en niet op de kaart
 
 Ook is een aanrader van zeker volgende kolommen mee te geven:
