@@ -58,14 +58,14 @@ const map = new mapboxgl.Map({
   zoom: config.zoom,
   transformRequest: transformRequest,
   attrubutionControl: false
-})
+});
 
 function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature,
     zoom: 13
   })
-}
+};
 
 function createPopup(currentFeature) {
   const popups = document.getElementsByClassName('mapboxgl-popup');
@@ -75,7 +75,7 @@ function createPopup(currentFeature) {
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(`<h3 style="font-weight:700;font-size:18;">${currentFeature.properties[config.popupInfo]}</h3><br><p>${currentFeature.properties[config.popupInfo3]}</p><br><a href"${popupInfo2}">Meer info</a>`)
     .addTo(map);
-}
+};
 
 
 
