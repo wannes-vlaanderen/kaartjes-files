@@ -13,7 +13,7 @@ Alle nodige files vind je terug [hier](https://github.com/wannes-vlaanderen/kaar
 De basiscode laad een map in, waarop klikbare bolletjes komen, die u een tekstballontje geven met meer info over de locatie.
 
 ### Uitbereidingen
-- Sidebar: een venstertje aan de zijkant, waarin een titel, beschrijving, en een lijst met de filters in kan komen
+- Sidebar: een venstertje aan de zijkant, waarin een titel, beschrijving, en een lijst met de locaties in kan komen
 - Filters: enkel te combineren met de sidebar. Een knop wordt toegevoegd, waarmee men filters kan instellen.
 - Legende: een mogelijkheid tot het plaatsen van een legende op je kaart, ook het logo van Vlaanderen is omgeving kan hiermee geplaatst worden
 - AdvancedFilters: het aan en uitzetten van sommige filters laat vlakjes weg op de kaart.
