@@ -142,9 +142,9 @@ Hopelijk helpt deze beschrijving, laat gerust weten waar het duidelijker kan (vi
 ## CSV
 Je heb ook een CSV file nodig, ik ben vrij zeker dat dit ook kan door in geoJSON de juist properties mee te geven, maar heb geen tijd gehad mij hiermee bezig te houden (dus voel je vrij om dat zeker wel te doen, je mag mij gerust sturen voor hulp). Je CSV file moet minstens volgende twee kolommen bevatten:  
 - Longitude
-- Latitude
-Deze geven de positie op de kaart van de bolletjes
-Merk op: MapboxGL JS werkt met een decimale '.', geen ',', Engelse notatie is dus noodzakelijk.
+- Latitude  
+Deze geven de positie op de kaart van de bolletjes  
+Merk op: MapboxGL JS werkt met een decimale '.', geen ',', Engelse notatie is dus noodzakelijk.  
 Merk op: als de positie invalid is, dan komt de locatie niet in de lijst, en niet op de kaart
 
 Ook is een aanrader van zeker volgende kolommen mee te geven:
