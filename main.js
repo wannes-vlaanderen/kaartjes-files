@@ -7,10 +7,11 @@ config = {
   popupInfo: ['PLAATS_TITEL'],
   popupInfo2: ['PLAATS_LINK'],
   popupInfo3: ['PLAATS_BESCHRIJVING'],
+  tabTitle: "TABTITEL",
   // sidebar.js
   title: 'TITLE',
   description: 'BESCHRIJVING',
-  sideBarInfo: ['PLAATS_TITEL','PLAATS_INFO']
+  sideBarInfo: ['PLAATS_TITEL','PLAATS_INFO'],
   // filters.js
   filters: [
     {
@@ -52,6 +53,8 @@ const title = document.getElementById('title');
 title.innerText = config.title;
 const description = document.getElementById('description');
 description.innerText = config.description;
+const tabTitle = document.getElementById("tabtitle")
+tabTitle.innerText = config.tabTitle
 
 mapboxgl.accessToken = config.accessToken;
 
