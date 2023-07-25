@@ -7,6 +7,7 @@ config = {
   popupInfo: ['PLAATS_TITEL'],
   popupInfo2: ['PLAATS_LINK'],
   popupInfo3: ['PLAATS_BESCHRIJVING'],
+  tabTitle: "TABTITEL",
   // legende.js
   legende: {
     "KLEUR": "BETEKENIS",
@@ -23,6 +24,8 @@ const title = document.getElementById('title');
 if (title) {title.innerText = config.title;}
 const description = document.getElementById('description');
 if (description) {description.innerText = config.description;}
+const tabTitle = document.getElementById('tabtitle');
+tabTitle.innerText = config.tabTitle
 
 mapboxgl.accessToken = config.accessToken;
 
