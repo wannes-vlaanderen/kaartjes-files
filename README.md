@@ -36,7 +36,9 @@ const config = {
 tutorial voor [mapbox](#mapbox)  
 tutorial voor [csv](#csv)
 
-De velden style, accessToken en CSV worden later besproken. Center is plaats waar uw map op focust als je de site laad, hierdoor is het mogelijk om niet altijd midden op vlaanderen uit te komen. De zoom bepaald hoe ver je bent ingezoomd.
+De velden style, accessToken en CSV worden later besproken. 
+
+Center is plaats waar uw map op focust als je de site laad, hierdoor is het mogelijk om niet altijd midden op vlaanderen uit te komen. De zoom bepaald hoe ver je bent ingezoomd.
 
 De 3 popup velden worden gebruikt in de tekstballonetjes, de titel komt bovenaan in het vet, de link komt achter een link object 'Meer Info'. En de beschrijving komt ertussenin. De code gaat deze informatie opzoeken in de csv, je kolomheaders moet je hier aanvullen, het is hoofdlettergevoelig.:
 
