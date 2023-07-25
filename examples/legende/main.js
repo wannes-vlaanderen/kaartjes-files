@@ -36,7 +36,7 @@ const map = new mapboxgl.Map({
   center: config.center,
   zoom: config.zoom,
   transformRequest: transformRequest,
-  attrubutionControl: false
+  attributionControl: false
 });
 
 map.addControl(new Legenda(config.legende), "top-right")
@@ -72,15 +72,15 @@ function createPopup(currentFeature) {
   if (popups[0]) popups[0].remove();
   new mapboxgl.Popup({ closeOnClick: true })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML(`<h3 style="font-weight:700;font-size:18;">${currentFeature.properties[config.popupInfo]}</h3><br><p>${currentFeature.properties[config.popupInfo3]}</p><br><a href"${popupInfo2}">Meer info</a>`)
+    .setHTML(`<h3 style="font-weight:700;font-size:18;">${currentFeature.properties[config.popupInfo]}</h3><br><p>${currentFeature.properties[config.popupInfo3]}</p><br><a href"${currentFeature.properties[config.popupInfo2]}">Meer info</a>`)
     .addTo(map);
 };
 
 function sortByDistance(selectedPoint) {
   const options = { units: 'miles' };
   let data;
-  if (filteredGeojson.features.length > 0) {
-    data = filteredGeojson;
+  if (filteredGeoJSON.features.length > 0) {
+    data = filteredGeoJSON;
   } else {
     data = geojsonData;
   }
