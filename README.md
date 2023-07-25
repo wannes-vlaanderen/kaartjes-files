@@ -44,6 +44,12 @@ De 3 popup velden worden gebruikt in de tekstballonetjes, de titel komt bovenaan
 
 Tabtitel is hetgeen bovenaan in uw tabblad info komt te staan.
 
+#### Hosten van de website
+Voor het hosten van de website wordt gebruik gemaakt van github pages. Een voorbeeld vind je [hier](https://www.github.com/wannes-vlaanderen/poort-west-limburg).
+
+Zoals je ziet plaats je gewoon alle files op een hoopje in de hoofdmap. Daarna moet je [github pages](https://pages.github.com/) aanzetten.  
+tutorial voor [github pages](#github-pages)
+
 
 #### Sidebar
 De sidebar laat toe wat extra algemene informatie mee te geven, samen met een oplijsting van alle aangeduide plaatsen.
@@ -156,6 +162,16 @@ Ook is een aanrader van zeker volgende kolommen mee te geven:
 - Link
 
 Meer kolommen dan deze 5 kunnen worden gebruikt voor in de sidebar mee te geven, of in filters. Zonder de sidebar is het wat verloren moeite.
+
+## Github Pages
+Een uitgebreide tutorials voor github pages kan je terugvinden in Benjamin zijn tutorial. Hieronder een kort stappenplan.
+
+- Upload al je files in de hoofdmap van je github repository.
+- Ga naar instellingen 'settings'.
+- In de linkerkolom, onder 'Code en automation' vind je helemaal vanonder 'Pages'.
+- Onder het subtiteltje 'Build and deployement', onder 'Branch' selecteer je de 'main' brach (dit kan soms ook de 'master' branch zijn).
+- Duw daarna op save.
+- Na enkele minuten zou je site moeten beschikbaar zijn, als dit zo is, komt dit bovenaan de pagine te verschijnen.
 
 
 
