@@ -101,7 +101,7 @@ Merk op: je moet alle items opsommen, ik heb geen tijd genomen om uit te zoeken 
 Merk op: de kolomtitel is hoofdlettergevoelig  
 Merk op: je kan een plaats in meerdere categorieën indelen door in 1 cel op de csv, door een komma gescheiden meerdere waarden mee te geven, eg. Antwerpen, Wommelgem, Ranst // zal getoond worden als Antwerpen, Wommelgem of Ranst wordt geselecteerd.
 
-Naast het instellen van de config, moet je ook volgende functie callen:
+Naast het instellen van de config, moet je ook volgende functie oproepen:
 ```js
 setupFilters(config.filters);
 ```
