@@ -83,7 +83,7 @@ const map = new mapboxgl.Map({
 });
 
 map.addControl(new mapboxgl.AttributionControl({
-  customAttribution: "<a href='https://vlaanderen.be'>Vlaamse Overheid</a>"
+  customAttribution: "<a href='https://vlaanderen.be' target='_blank'>Vlaamse Overheid</a>"
 }))
 
 function flyToLocation(currentFeature) {
