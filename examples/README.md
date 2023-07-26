@@ -7,4 +7,4 @@ Merk op: in alle voorbeelden wordt het logo van vlaanderen linksboven op de kaar
 map.addControl(new LogoVlaanderen(), "top-left")
 ```
 
-Gemaakte voorbeelden vind je (hier)[https://wannes-vlaanderen.github.io/kaartjes], let wel op, sommige van deze kaartjes maken gebruik van andere code.
+Gemaakte voorbeelden vind je [hier](https://wannes-vlaanderen.github.io/kaartjes), let wel op, sommige van deze kaartjes maken gebruik van andere code.
