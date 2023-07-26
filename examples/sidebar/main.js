@@ -55,7 +55,7 @@ const map = new mapboxgl.Map({
 
 map.addControl(new LogoVlaanderen(), "top-left")
 map.addControl(new mapboxgl.AttributionControl({
-  customAttribution: "<a href='https://vlaanderen.be'>Vlaamse Overheid</a>"
+  customAttribution: "<a href='https://vlaanderen.be' target='_blank'>Vlaamse Overheid</a>"
 }))
 
 function flyToLocation(currentFeature) {
@@ -69,9 +69,29 @@ function createPopup(currentFeature) {
   const popups = document.getElementsByClassName('mapboxgl-popup');
   /** Check if there is already a popup on the map and if so, remove it */
   if (popups[0]) popups[0].remove();
+  let div = document.createElement("div");
+  let h3 = document.createElement("h3");
+  h3.style.fontWeight = 700;
+  h3.style.fontSize = 18;
+  h3.innerText = currentFeature.properties[config.popupInfo];
+  let br = document.createElement("br");
+  let content = document.createElement("p");
+  content.innerText = currentFeature.properties[config.popupInfo3];
+  let br_again = document.createElement("br");
+  let link = document.createElement("a");
+  link.href = currentFeature.properties[config.popupInfo2];
+  link.innerText = "Meer info";
+  link.target = "_blank";
+  
+  div.appendChild(h3);
+  div.appendChild(br);
+  div.appendChild(content);
+  div.appendChild(br_again);
+  div.appendChild(link);
+  
   new mapboxgl.Popup({ closeOnClick: true })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML(`<h3 style="font-weight:700;font-size:18;">${currentFeature.properties[config.popupInfo]}</h3><br><p>${currentFeature.properties[config.popupInfo3]}</p><br><a href"${currentFeature.properties[config.popupInfo2]}">Meer info</a>`)
+    .setDOMContent(div)
     .addTo(map);
 };
 
