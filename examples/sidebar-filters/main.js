@@ -87,10 +87,10 @@ function createPopup(currentFeature) {
   let h3 = document.createElement("h3");
   h3.style.fontWeight = 700;
   h3.style.fontSize = 18;
-  h3.innerText = currentFeature.properties[config.popupInfo];
+  h3.innerHTML = currentFeature.properties[config.popupInfo];
   let br = document.createElement("br");
   let content = document.createElement("p");
-  content.innerText = currentFeature.properties[config.popupInfo3];
+  content.innerHTML = currentFeature.properties[config.popupInfo3];
   let br_again = document.createElement("br");
   let link = document.createElement("a");
   link.href = currentFeature.properties[config.popupInfo2];
