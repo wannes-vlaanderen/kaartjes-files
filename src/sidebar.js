@@ -68,7 +68,8 @@ function buildLocationList(locationData) {
 
     const p = button.appendChild(document.createElement('p'))
     p.lineHeight = 1.25
-    p.innerHTML = prop[config.sideBarInfo[0]]
+    p.classList.append('listing-style');
+    p.innerText = prop[config.sideBarInfo[0]]
 
     // Add details to the individual listing.
     const details = item.appendChild(document.createElement('div'));
