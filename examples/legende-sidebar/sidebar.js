@@ -39,14 +39,15 @@ function createSidebar() {
   sidebar.appendChild(listing)
   
   div2.appendChild(sidebar)
-  div1.appendChild(div2)
   
   const map = document.getElementById('map')
-  map.parentNode.removeChild(map)
+  let partent = map.parentNode
+  parent.removeChild(map)
   map.classList.add('flex-child', 'flex-child--grow', 'w-auto', 'viewport-full-ml', 'viewport-twothirds')
   div1.appendChild(map)
+  div1.appendChild(div2)
   
-  document.body.appendChild(div1)
+  parent.appendChild(div1)
 }
 
 function buildLocationList(locationData) {
@@ -68,7 +69,7 @@ function buildLocationList(locationData) {
 
     const p = button.appendChild(document.createElement('p'))
     p.lineHeight = 1.25
-    p.innerHTML = prop[config.sideBarInfo[0]]
+    p.innerText = prop[config.sideBarInfo[0]]
 
     // Add details to the individual listing.
     const details = item.appendChild(document.createElement('div'));
