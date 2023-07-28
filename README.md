@@ -173,7 +173,55 @@ Een uitgebreide tutorials voor github pages kan je terugvinden in Benjamin zijn 
 - Duw daarna op save.
 - Na enkele minuten zou je site moeten beschikbaar zijn, als dit zo is, komt dit bovenaan de pagine te verschijnen.
 
+## Paddle CMS
+De website draait op PaddleCMS (toen ik werkte bij de Vlaamse overheid). Om de kaart toe te voegen op de website zijn twee mogelijkheden. De eerste is gemakkelijk om een soort preview te krijgen, als je het uiteindelijk op de website zet, is het beter de tweede methode te gebruiken.
 
+### Via Github
+Er bestaat een mogelijkheid om simpelweg hetgeen hier op github getoont wordt op de website te zetten. Hiervoor voeg je een blok toe op Paddle (ga naar de webpagina die je wilt bewerken, en duw op layout, dan kan je blokken en secties toevoegen). En dan krijg je helemaal bovenaan "aangepast blok aanmaken", duw daarop. Kies noor voor "embed widget". 
+
+Voeg volgende code toe in het HTML blokje, waarbij je de url vervangt door de github url van jouw kaart. Je kan de hoogte hierbij aanpassen. Laat de javascript en css blokjes maar met gerust, en duw op "toevoegen".
+```html
+<iframe style="width:100%;height:700px" src="https://wannes-vlaanderen.github.io/poort-genk"></iframe>
+```
+Je bent klaar, in de nieuwste layout zou de pagina nu moeten verschijnen.
+
+### Alles op Paddle CMS
+Idialiter staat alles op de website van de overheid zelf, je weet nooit dat github iets uitsteekt, en het laatste wat je wilt is al je code kwijt zijn (Github is wel zeer handig voor het debuggen van de kaartjes).
+
+Hiervoor moet je alle bestanden eigenlijk uploaden naar Paddle CMS, hieronder vind je een niet geteste handleiding (dit zou echter moeten werken).  
+Voer eerst dezelfde stappen als hierboven uit, nu zullen we en het HTML, en het Javascript en het CSS blok vullen. 
+#### HTML
+Voeg in het html blok de onderstaande html code toe:
+```html
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link href='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css' rel='stylesheet'>
+<script src='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css'/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel='stylesheet' href="style.css" />
+
+<div style="width:100%;height=700px">
+    <div id="map"></div>
+</div>
+```
+
+#### JavaScript
+Javascript is waarschijnlijk het moeilijkste. Hierbij moet je alle javascript files (.js) samenvoegen, maar de volgorde maakt uit (joepie). Alles wordt samengevoegd in main.js, waarbij je achter de config variabele, en vlak voor `const bounds = []` alle code van de andere files moet worden ingevoegd, gewoon een copy paste is voldoende.  
+Hierna kan je alles wat in main.js staat (met dus alle extra code) in het javascript blok zetten.
+
+#### CSS
+Er is 1 CSS file, kopieer de inhoud van "style.css" naar het CSS veld.
+
+#### Slot
+Als alles is ingevuld, en je duwt op bewerken, zou de kaart moeten worden getoond.
 
 
 
