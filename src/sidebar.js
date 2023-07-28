@@ -39,13 +39,13 @@ function createSidebar() {
   sidebar.appendChild(listing)
   
   div2.appendChild(sidebar)
-  div1.appendChild(div2)
   
   const map = document.getElementById('map')
   let partent = map.parentNode
   parent.removeChild(map)
   map.classList.add('flex-child', 'flex-child--grow', 'w-auto', 'viewport-full-ml', 'viewport-twothirds')
   div1.appendChild(map)
+  div1.appendChild(div2)
   
   parent.appendChild(div1)
 }
