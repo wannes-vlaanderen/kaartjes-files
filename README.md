@@ -174,7 +174,9 @@ Een uitgebreide tutorials voor github pages kan je terugvinden in Benjamin zijn 
 - Na enkele minuten zou je site moeten beschikbaar zijn, als dit zo is, komt dit bovenaan de pagine te verschijnen.
 
 ## Paddle CMS
-De website draait op PaddleCMS (toen ik werkte bij de Vlaamse overheid). Om de kaart toe te voegen op de website zijn twee mogelijkheden. De eerste is gemakkelijk om een soort preview te krijgen, als je het uiteindelijk op de website zet, is het beter de tweede methode te gebruiken.
+De website draait op PaddleCMS (toen ik werkte bij de Vlaamse overheid). Om de kaart toe te voegen op de website zijn twee mogelijkheden. 
+De eerste methode is a piece of cake, met een enkel lijntje code staat de site die je op github hebt gemaakt, nu in de webpagine op de site van omgevingvlaanderen.  
+De tweede methode vergt wat meer programmeerwerk, het voordeel is dat alle code daarmee op de site van de overheid staat, en dat je niet afhankelijk bent van github om de kaart te zien.
 
 ### Via Github
 Er bestaat een mogelijkheid om simpelweg hetgeen hier op github getoont wordt op de website te zetten. Hiervoor voeg je een blok toe op Paddle (ga naar de webpagina die je wilt bewerken, en duw op layout, dan kan je blokken en secties toevoegen). En dan krijg je helemaal bovenaan "aangepast blok aanmaken", duw daarop. Kies noor voor "embed widget". 
